@@ -1,0 +1,21 @@
+<h3>{{appSettings.title}}</h3>
+Filter: <input type="text" ng-model="userFilter.name"/>
+<br />
+<br />
+<table>
+  <tr>
+    <th ng-click="usersCtrl.doSort('name')">Name</th>
+    <th ng-click="usersCtrl.doSort('email')">Email</th>
+    <th ng-click="usersCtrl.doSort('phone_number")>Phone Contact</th>
+    <th>&nbsp;</th>
+  </tr>
+  <tr ng-repeat="user in usersCtrl.users | filter:userFilter | orderBy:usersCtrl.sortBy:usersCtrl.reverse">
+    <td>{{user.name}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.phone_number}}</td>
+</table>
+<br/>
+<span>Total users: {{usersCtrl.users.length}}</span>
+<br/>
+<br/>
+<footer>Version: {{usersCtrl.appSettings.version}}</footer>
