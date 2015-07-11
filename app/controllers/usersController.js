@@ -1,4 +1,5 @@
 (function usersControllerIIFEE() {
+
   var UsersController = function(usersFactory, appSettings) {
     this.sortBy = "name";
     this.reverse = false;
@@ -22,4 +23,4 @@
   UsersController.$inject = ['usersFactory', 'appSettings'];
 
   angular.module('usersApp').controller('usersController', UsersController);
-})(angular);
+})();
