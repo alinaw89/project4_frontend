@@ -1,4 +1,4 @@
-(function usersControllerIIFEE() {
+(function usersControllerIIFE() {
 
   var UsersController = function(usersFactory, appSettings) {
     this.sortBy = "name";
