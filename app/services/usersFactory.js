@@ -6,7 +6,9 @@
 
     factory.getUsers = function() {
       return $http.get('http://localhost:3000/users').success(function(response) {
-        angular.copy(response, factory.users);
+        debugger;
+
+        angular.copy(response.users, factory.users);
       });
     };
 
