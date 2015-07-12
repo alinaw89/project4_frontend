@@ -1,0 +1,28 @@
+<h3>{{appSettings.title}}</h3>
+Filter: <input type="text" ng-model="visitFilter.protocol"/>
+<br />
+<br />
+<table>
+  <tr>
+    <th ng-click="usersCtrl.doSort('start_of_visit')">Visit Start Time</th>
+    <th ng-click="usersCtrl.doSort('end_of_visit')">Visit End Time</th>
+    <th ng-click="usersCtrl.doSort('protocol')">Protocol Title</th>
+    <th ng-click="usersCtrl.doSort('subject_id')"> Subject ID</th>
+    <th ng-click="usersCtrl.doSort('reason_for_visit')">Reason for Visit</th>
+    <th ng-click="usersCtrl.doSort('message')">Message</th>
+    <th ng-click="usersCtrl.doSort('visit_status')">Visit Status</th>
+    <th ng-click="usersCtrl.doSort('sent_status')">Sent Status</th>
+    <th ng-click="usersCtrl.doSort('manager_response_status')">Manager Response</th>
+    <th>&nbsp;</th>
+  </tr>
+  <tr ng-repeat="user in usersCtrl.users | filter:userFilter | orderBy:usersCtrl.sortBy:usersCtrl.reverse">
+    <td>{{user.name}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.phone_number}}</td>
+  </tr>
+</table>
+<br/>
+<span>Total users: {{usersCtrl.users.length}}</span>
+<br/>
+<br/>
+<footer>Version: {{usersCtrl.appSettings.version}}</footer>
