@@ -20,7 +20,7 @@
         //   templateUrl: 'app/views/users.html'
         // })
         //visit page
-      .when('/users/:user_id', {
+        .when('/users/:user_id', {
           controller: 'visitsController',
           controllerAs: 'visitsCtrl',
           templateUrl: 'app/views/visits.html'
