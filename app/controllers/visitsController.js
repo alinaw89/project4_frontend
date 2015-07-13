@@ -1,14 +1,15 @@
 (function visitsControllerIIFE() {
 
-  var VisitsController = function(visitsFactory, appSettings) {
-    this.sortBy = "protocol";
+  var VisitsController = function(visitsFactory, $routeParams) {
+    this.sortBy = "start_of_visit";
     this.reverse = false;
     this.visits = visitsFactory.visits;
     this.visit = visitsFactory.visit;
-    this.appSettings = appSettings;
+    var vm = this;
+    vm.userId = $routeParams.user_id;
 
     function init() {
-      visitsFactory.getVisits();
+      visitsFactory.getVisits(vm.userId);
     }
 
     init();
@@ -20,7 +21,7 @@
 
   };
 
-  VisitsController.$inject = ['visitsFactory', 'appSettings'];
+  VisitsController.$inject = ['visitsFactory', '$routeParams'];
 
   angular.module('briefApp').controller('visitsController', VisitsController);
 })();

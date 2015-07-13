@@ -3,16 +3,13 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Brief</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<!--
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="app/css/app.css">
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>-->
     <script src='bower_components/angular/angular.js'></script>
     <script src='bower_components/angular-route/angular-route.js'></script>
     <script src='app/app.js'></script>
     <script src='app/appRoutes.js'></script>
-<!--     // <script src='app/usersApp.js'></script>
-    // <script src='app/visitsApp.js'></script> -->
     <script src='app/services/values.js'></script>
     <script src='app/services/usersFactory.js'></script>
     <script src='app/services/visitsFactory.js'></script>
@@ -21,8 +18,8 @@
 
 
 </head>
-<body>
-  <div ng-view=""></div>
+<body ng-view="">
+
 
 </body>
 </html>

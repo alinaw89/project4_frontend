@@ -13,9 +13,8 @@
 
 <!--actual code-->
 
-<div class="test">
-  <h3>{{appSettings.title}}</h3>
-  Filter: <input type="text" ng-model="userFilter.name"/>
+<div class="container">
+  Filter: <input class="filter_margins" type="text" ng-model="userFilter.name"/>
   <br />
   <br />
   <table>
@@ -25,13 +24,16 @@
       <th ng-click="usersCtrl.doSort('phone_number')">Phone Contact</th>
       <th>&nbsp;</th>
     </tr>
-    <tr ng-repeat="user in usersCtrl.users | filter:userFilter | orderBy:usersCtrl.sortBy:usersCtrl.reverse">
-      <td>{{user.name}}</td>
-      <td>{{user.email}}</td>
-      <td>{{user.phone_number}}</td>
+    <tr ng-click="usersCtrl.showUser(user.id)" ng-repeat="user in usersCtrl.users | filter:userFilter | orderBy:usersCtrl.sortBy:usersCtrl.reverse">
+        <td >{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.phone_number}}</td>
     </tr>
   </table>
   <br/>
+  </div>
+  <div class="col">
   <span>Total users: {{usersCtrl.users.length}}</span>
   <br/>
   <br/>

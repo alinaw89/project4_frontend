@@ -4,10 +4,16 @@
     factory.visits = [];
     factory.visit = {};
 
-    factory.getVisits = function() {
-      return $http.get('http://localhost:3000/visits').success(function(response) {
-
-        angular.copy(response.visits, factory.visits);
+    factory.getVisits = function(userId) {
+      return $http({
+        method: 'get',
+        url: "http://localhost:3000/users/" + userId,
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        }
+      }).success(function(response) {
+        angular.copy(response.user.visits, factory.visits);
       });
     };
 
