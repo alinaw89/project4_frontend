@@ -1,4 +1,4 @@
-angular.module("usersApp").value('appSettings', {
-  title: "Users Application",
-  version: "1.0"
-});
+// angular.module("briefApp").value('appSettings', {
+//   title: "Brief Application",
+//   version: "1.0"
+// });

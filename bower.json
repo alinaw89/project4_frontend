@@ -6,7 +6,7 @@
     "alinaw89 <ali.naw89@gmail.com>"
   ],
   "description": "project 4",
-  "main": "usersApp.js",
+  "main": "app.js",
   "license": "MIT",
   "ignore": [
     "**/.*",

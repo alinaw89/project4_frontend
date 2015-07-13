@@ -22,6 +22,6 @@
 
   usersFactory.$inject = ['$http'];
 
-  angular.module('usersApp').factory('usersFactory', usersFactory);
+  angular.module('briefApp').factory('usersFactory', usersFactory);
 
 })();

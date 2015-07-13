@@ -22,5 +22,5 @@
 
   VisitsController.$inject = ['visitsFactory', 'appSettings'];
 
-  angular.module('visitsApp').controller('visitsController', VisitsController);
+  angular.module('briefApp').controller('visitsController', VisitsController);
 })();

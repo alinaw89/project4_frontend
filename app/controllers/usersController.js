@@ -1,11 +1,11 @@
 (function usersControllerIIFE() {
 
-  var UsersController = function(usersFactory, appSettings) {
+  var UsersController = function(usersFactory) {
     this.sortBy = "name";
     this.reverse = false;
     this.users = usersFactory.users;
     this.user = usersFactory.user;
-    this.appSettings = appSettings;
+    // this.appSettings = appSettings;
 
     function init() {
       usersFactory.getUsers();
@@ -20,7 +20,7 @@
 
   };
 
-  UsersController.$inject = ['usersFactory', 'appSettings'];
+  UsersController.$inject = ['usersFactory'];
 
-  angular.module('usersApp').controller('usersController', UsersController);
+  angular.module('briefApp').controller('usersController', UsersController);
 })();
