@@ -7,6 +7,12 @@
         .when('/', {
           templateUrl: 'app/views/home.html'
         })
+        //login
+        .when('/login', {
+          controller: 'authController',
+          controllerAs: 'authCtrl',
+          templateUrl: 'app/views/login.html'
+        })
         //user page
         .when('/users', {
           controller: 'usersController',
