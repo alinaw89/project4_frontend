@@ -13,6 +13,12 @@
           controllerAs: 'authCtrl',
           templateUrl: 'app/views/login.html'
         })
+        //signup
+        .when('/signup', {
+          controller: 'authController',
+          controllerAs: 'authCtrl',
+          templateUrl: 'app/views/signup.html'
+        })
         //user page
         .when('/users', {
           controller: 'usersController',
@@ -31,6 +37,11 @@
           controllerAs: 'visitsCtrl',
           templateUrl: 'app/views/visits.html'
         })
+          .when('/users/:user_id/visits/:visit_id', {
+            controller: 'notificationsController',
+            controllerAs: 'notificationsCtrl',
+            templateUrl: 'app/views/notifications.html'
+          })
           .otherwise({
             redirectTo: '/'
           });

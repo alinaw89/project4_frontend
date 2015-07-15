@@ -1,0 +1,10 @@
+<div class="container">
+  <table>
+    <tr>
+      <th ng-click="notificationsCtrl.showNotification(:visit_id)">Message</th>
+    </tr>
+    <tr ng-show="notification in notificationsCtrl.notification">
+      <td>{{notification.message}}</td>
+    </tr>
+  </table>
+</div>

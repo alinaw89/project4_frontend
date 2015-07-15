@@ -17,6 +17,23 @@
       });
     };
 
+    factory.createVisit = function(visitParams) {
+      console.log(visitParams);
+      return $http({
+        method: 'post',
+        url: "http://localhost:3000/visits",
+        content: visitParams,
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        }
+      }).success(function(response) {
+        console.log(response);
+      }).error(function(error) {
+        console.log(error);
+      })
+    };
+
     factory.getVisit = function(visitId) {
       return $http.get('http://localhost:3000/visits/' + visitId).success(function(response) {
         angular.copy(response, factory.visit);
@@ -29,5 +46,6 @@
   visitsFactory.$inject = ['$http'];
 
   angular.module('briefApp').factory('visitsFactory', visitsFactory);
+
 
 })();

@@ -19,6 +19,12 @@
       this.reverse = !this.reverse;
     };
 
+    this.newVisit = {};
+
+    this.createVisit = function() {
+      visitsFactory.createVisit(this.newVisit);
+    };
+
   };
 
   VisitsController.$inject = ['visitsFactory', '$routeParams'];

@@ -10,9 +10,9 @@
       <th ng-click="visitsCtrl.doSort('subject_id')"> Subject ID</th>
       <th ng-click="visitsCtrl.doSort('reason_for_visit')">Reason for Visit</th>
       <th ng-click="visitsCtrl.doSort('message')">Message</th>
-      <th ng-click="visitsCtrl.doSort('visit_status')">Visit Status</th>
-      <th ng-click="visitsCtrl.doSort('sent_status')">Sent Status</th>
-      <th ng-click="visitsCtrl.doSort('manager_response_status')">Manager Response</th>
+      <th ng-click="visitsCtrl.doSort('priority')">Priority Status</th>
+      <th ng-click="notificationsCtrl.showNotification(visit.id)">Notification</th>
+
       <th>&nbsp;</th>
     </tr>
     <tr ng-repeat="visit in visitsCtrl.visits | filter:visitFilter | orderBy:visitsCtrl.sortBy:visitsCtrl.reverse">
@@ -22,9 +22,8 @@
       <td>{{visit.subject_id}}</td>
       <td>{{visit.reason_for_visit}}</td>
       <td>{{visit.message}}</td>
-      <td>{{visit.visit_status}}</td>
-      <td>{{visit.sent_status}}</td>
-      <td>{{visit.manager_response_status}}</td>
+      <td>{{visit.priority}}</td>
+      <td>{{visit.notifications[0].message}}</td>
     </tr>
   </table>
   <br/>
@@ -33,3 +32,17 @@
   <br/>
   <footer>Version: {{usersCtrl.appSettings.version}}</footer>
 </div>
+
+<!-- CREATING NEW VISIT -->
+
+<form>
+  <input type="datetime-local" name="start_of_visit" ng-model="visitsCtrl.newVisit.start_of_visit"/>Start Date
+  <input type="datetime-local" name="end_of_visit" ng-model="visitsCtrl.newVisit.end_of_visit"/> End Date
+  <input type="text" name="protocol" placeholder="protocol" ng-model="visitsCtrl.newVisit.protocol"/>
+  <input type="text" name="subject_id" placeholder="subject id" ng-model="visitsCtrl.newVisit.subject_id"/>
+  <input type="text" name="reason_for_visit" placeholder="reason for visit" ng-model="visitsCtrl.newVisit.reason_for_visit"/>
+  <input type="text" name="message" placeholder="message" ng-model="visitsCtrl.newVisit.message"/>
+  <input type="text" name="priority" placeholder="priority" ng-model="visitsCtrl.newVisit.priority"/>
+  <input type="text" name="notification" placeholder="notification" ng-model="visitsCtrl.newVisit.notification"/>
+<button ng-click="visitsCtrl.createVisit()">New Visit</button>
+</form>

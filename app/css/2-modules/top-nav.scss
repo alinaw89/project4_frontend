@@ -1,8 +1,8 @@
 .centered-navigation {
   $base-border-radius: 3px !default;
-  $dark-gray: #333 !default;
+  // $dark-gray: #333 !default;
   $large-screen: em(860) !default;
-  $base-font-color: $dark-gray !default;
+  $base-font-color: black;
   $centered-navigation-padding: 1em;
   $centered-navigation-logo-height: 2em;
   $centered-navigation-background: #E7F1EC;
@@ -15,7 +15,7 @@
   $centered-navigation-item-nudge: 2.2em;
   $horizontal-bar-mode: $large-screen;
 
-  background-color: $centered-navigation-background;
+  background-color: white;
   border-bottom: 1px solid darken($centered-navigation-background, 6%);
   min-height: $centered-navigation-height;
   width: 100%;
