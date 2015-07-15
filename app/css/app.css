@@ -515,10 +515,11 @@ picture {
             width: 12em; } }
 
 .hero {
-  background: url("https://static.pexels.com/photos/7075/people-office-group-team.jpg"), -webkit-linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
-  background: url("https://static.pexels.com/photos/7075/people-office-group-team.jpg"), linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
+  height: 550px;
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"), -webkit-linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"), linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
   background-color: #324766;
-  background-position: bottom;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 3em; }
@@ -542,7 +543,8 @@ picture {
       content: "";
       display: table; }
     .hero .hero-inner .hero-copy {
-      text-align: center; }
+      text-align: center;
+      margin-top: 100px; }
       .hero .hero-inner .hero-copy h1 {
         font-size: 1.6em;
         margin-bottom: 0.5em; }
@@ -557,6 +559,9 @@ picture {
           .hero .hero-inner .hero-copy p {
             font-size: 1.1em;
             max-width: 40%; } }
+      .hero .hero-inner .hero-copy .hero-title {
+        font-size: 4em;
+        font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
 
 .bullets {
   display: -webkit-box;
@@ -683,8 +688,7 @@ picture {
     text-align: center; }
 
 body {
-  background-color: black;
-  color: blue; }
+  color: black; }
 
 .filter_margins {
   height: 20px;
