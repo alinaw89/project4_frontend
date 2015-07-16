@@ -37,11 +37,12 @@
           controllerAs: 'visitsCtrl',
           templateUrl: 'app/views/visits.html'
         })
-          .when('/users/:user_id/visits/:visit_id', {
-            controller: 'notificationsController',
-            controllerAs: 'notificationsCtrl',
-            templateUrl: 'app/views/notifications.html'
-          })
+        //notifications
+        .when('/users/:user_id/visits/:visit_id', {
+          controller: 'notificationsController',
+          controllerAs: 'notificationsCtrl',
+          templateUrl: 'app/views/notifications.html'
+        })
           .otherwise({
             redirectTo: '/'
           });

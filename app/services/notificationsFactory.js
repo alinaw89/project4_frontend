@@ -16,6 +16,20 @@
       });
     };
 
+    factory.createNotification = function(visitId, notificationParams) {
+      var notification = {
+        notification: {
+          message: notificationParams
+        }
+      };
+      return $http.post("http://localhost:3000/visits/" + visitId + '/notifications', notification)
+        .success(function(response) {
+          console.log(response);
+        }).error(function(error) {
+          console.log(error);
+        });
+    };
+
     return factory;
   };
 

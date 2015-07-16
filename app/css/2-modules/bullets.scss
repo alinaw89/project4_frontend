@@ -1,9 +1,16 @@
+.featuresbullet{
+  font-size: 30px;
+  text-align: center;
+  margin-top: 100px;
+}
+
 .bullets {
   $base-line-height: 1.5em !default;
   $action-color: #477DCA !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
   $icon-bullet-size: 3.5em;
+  height: 400px;
 
   @include display(flex);
   @include flex-wrap(wrap);
@@ -11,6 +18,7 @@
   margin: 1em;
   overflow: auto;
   padding: 0;
+  margin-top: 100px;
 
   .bullet {
     @include flex-basis(20em);

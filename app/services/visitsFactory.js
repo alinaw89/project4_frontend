@@ -6,32 +6,25 @@
 
     factory.getVisits = function(userId) {
       return $http({
-        method: 'get',
-        url: "http://localhost:3000/users/" + userId,
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        }
-      }).success(function(response) {
-        angular.copy(response.user.visits, factory.visits);
-      });
+          method: 'get',
+          url: "http://localhost:3000/users/" + userId
+        })
+        //.success(function(response) {
+        //  angular.copy(response.user.visits, factory.visits);
+        // });
     };
 
     factory.createVisit = function(visitParams) {
       console.log(visitParams);
-      return $http({
-        method: 'post',
-        url: "http://localhost:3000/visits",
-        content: visitParams,
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        }
-      }).success(function(response) {
-        console.log(response);
-      }).error(function(error) {
-        console.log(error);
-      })
+      var visit = {
+        visit: visitParams
+      };
+      return $http.post("http://localhost:3000/visits", visitParams)
+        .success(function(response) {
+          console.log(response);
+        }).error(function(error) {
+          console.log(error);
+        });
     };
 
     factory.getVisit = function(visitId) {
