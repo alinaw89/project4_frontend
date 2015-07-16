@@ -42,7 +42,16 @@
   <input type="text" name="subject_id" placeholder="subject id" ng-model="visitsCtrl.newVisit.subject_id"/>
   <input type="text" name="reason_for_visit" placeholder="reason for visit" ng-model="visitsCtrl.newVisit.reason_for_visit"/>
   <input type="text" name="message" placeholder="message" ng-model="visitsCtrl.newVisit.message"/>
-  <input type="text" name="priority" placeholder="priority" ng-model="visitsCtrl.newVisit.priority"/>
+ <!--  <input type="text" name="priority" placeholder="priority" ng-model="visitsCtrl.newVisit.priority"/> -->
+ Priority
+  <select ng-model="visitsCtrl.newVisit.priority" name="priority" >
+    <option value="High">High</option>
+    <option value="Medium">Medium</option>
+    <option value="Low">Low</option>
+  </select>
+
+
+
   <input type="text" name="notification" placeholder="notification" ng-model="visitsCtrl.newVisit.notification"/>
 <button ng-click="visitsCtrl.createVisit()">New Visit</button>
 </form>
