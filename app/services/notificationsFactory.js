@@ -16,10 +16,10 @@
       });
     };
 
-    factory.createNotification = function(visitId, notificationParams) {
+    factory.createNotification = function(visitId, notificationParams, from) {
       var notification = {
         notification: {
-          message: notificationParams
+          message: "From: " + from + " " + "Message: " + notificationParams
         }
       };
       return $http.post("http://localhost:3000/visits/" + visitId + '/notifications', notification)

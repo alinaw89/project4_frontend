@@ -1,6 +1,6 @@
 (function visitsControllerIIFE() {
 
-  var VisitsController = function(visitsFactory, notificationsFactory, $routeParams) {
+  var VisitsController = function(visitsFactory, notificationsFactory, AuthFactory, $routeParams) {
     this.sortBy = "start_of_visit";
     this.reverse = false;
     //this.visits = visitsFactory.visits;
@@ -29,15 +29,16 @@
     this.newVisit = {};
 
     this.createVisit = function() {
+      var from = AuthFactory.currentUser.name;
       var notification = this.newVisit.notification;
       visitsFactory.createVisit(this.newVisit).then(function(response) {
 
-        notificationsFactory.createNotification(response.data.visit.id, notification);
+        notificationsFactory.createNotification(response.data.visit.id, notification, from);
       });
     };
   };
 
-  VisitsController.$inject = ['visitsFactory', 'notificationsFactory', '$routeParams'];
+  VisitsController.$inject = ['visitsFactory', 'notificationsFactory', 'AuthFactory', '$routeParams'];
 
   angular.module('briefApp').controller('visitsController', VisitsController);
 })();
