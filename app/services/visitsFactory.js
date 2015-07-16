@@ -33,6 +33,12 @@
       });
     };
 
+    factory.deleteVisit = function(visitId) {
+      return $http.delete('http://localhost:3000/visits/' + visitId).success(function(response) {
+        factory.getVisits();
+      })
+    }
+
     return factory;
   };
 

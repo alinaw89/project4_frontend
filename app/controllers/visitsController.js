@@ -36,7 +36,13 @@
         notificationsFactory.createNotification(response.data.visit.id, notification, from);
       });
     };
+
+    this.deleteVisit = function(visitId) {
+      visitsFactory.deleteVisit(visitId);
+    }
   };
+
+
 
   VisitsController.$inject = ['visitsFactory', 'notificationsFactory', 'AuthFactory', '$routeParams'];
 

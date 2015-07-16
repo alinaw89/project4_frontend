@@ -24,6 +24,7 @@
       <td>{{visit.message}}</td>
       <td>{{visit.priority}}</td>
       <td>{{visit.notifications[0].message}}</td>
+      <td><button ng-click="visitsCtrl.deleteVisit(visit.id)">Delete</button></td>
     </tr>
   </table>
   <br/>

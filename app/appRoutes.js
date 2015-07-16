@@ -37,11 +37,11 @@
           controllerAs: 'visitsCtrl',
           templateUrl: 'app/views/visits.html'
         })
-        //notifications
-        .when('/users/:user_id/visits/:visit_id', {
+        //all notifications
+        .when('/notifications', {
           controller: 'notificationsController',
           controllerAs: 'notificationsCtrl',
-          templateUrl: 'app/views/notifications.html'
+          templateUrl: 'app/views/notification.html'
         })
           .otherwise({
             redirectTo: '/'

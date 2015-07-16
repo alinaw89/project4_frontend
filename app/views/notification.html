@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <table>
     <tr>
       <th ng-click="notificationsCtrl.showNotification(:visit_id)">Message</th>
@@ -8,3 +8,32 @@
     </tr>
   </table>
 </div>
+ -->
+
+<!DOCTYPE html>
+<html class="home">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+
+  <h1>Notifications</h1>
+    <table>
+      <tr>
+        <th>Responded</th>
+        <th>Message</th>
+        <th>Visit</th>
+        <th>Priority</th>
+      </tr>
+      <tr ng-repeat="notification in notificationsCtrl.notifications">
+        <td>{{notification.responded}}</td>
+        <td>{{notification.message}}</td>
+        <td>{{notification.visit_id}}</td>
+        <td>{{notification.priority}}</td>
+      </tr>
+    </table>
+  </body>
+</html>
