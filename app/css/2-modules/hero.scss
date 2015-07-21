@@ -7,7 +7,7 @@
   $hero-background-bottom: #20392B;
   $hero-color: white;
   $gradient-angle: 10deg;
-  $hero-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
+  $hero-image: 'https://static.pexels.com/photos/425/apple-iphone-desk-office.jpg';
 
   @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
   background-color: #324766;
@@ -58,6 +58,7 @@
         font-size: 3em;
         font-family: Tahoma;
         letter-spacing: 6px;
+        margin-top: -90px;
       }
     }
   }

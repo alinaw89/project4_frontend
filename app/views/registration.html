@@ -1,0 +1,73 @@
+ <!DOCTYPE html>
+<html class="home">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+
+ <!--navbar-->
+<header class="centered-navigation" role="banner">
+  <div class="centered-navigation-wrapper">
+    <a href="javascript:void(0)" class="mobile-logo">
+      <img src="http://i.imgur.com/9rpOGvc.png?1" alt="Logo image">
+    </a>
+    <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
+    <nav role="navigation">
+      <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
+        <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
+        <li class="nav-link more"><a href="javascript:void(0)">Staff</a>
+          <ul class="submenu">
+            <li><a href="#/users">All Users</a></li>
+            <li><a href="#/notifications">Notifications</a></li>
+          </ul>
+        </li>
+        <li class="nav-link logo">
+          <a href="javascript:void(0)" class="logo">
+            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="Logo image">
+          </a>
+        </li>
+        <li class="nav-link" ng-hide="authCtrl.isLoggedIn()"><a href="#/login">Login</a></li>
+        <li class="nav-link" ng-show="authCtrl.isLoggedIn()" ng-click="authCtrl.logOut()"><a href="#/logout">Logout</a></li>
+        <li class="nav-link"><a href="#/registration">Register</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<div class="container">
+    <h2>Register</h2>
+    <div ng-show="registrationsCtrl.error" class="alert alert-danger"></div>
+    <form name="form" ng-submit="registrationsCtrl.register()" role="form">
+        <div class="form-group" ng-class="{ 'has-error': form.name.$dirty && form.name.$error.required }">
+            <label for="username">Name</label>
+            <input type="text" name="name" id="name" class="form-control" ng-model="registrationsCtrl.user.name" required />
+          <!--   <span ng-show="form.name.$dirty && form.name.$error.required" class="help-block">Name is required</span> -->
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.email.$dirty && form.email.$error.required }">
+            <label for="username">Email</label>
+            <input type="text" name="email" id="Text1" class="form-control" ng-model="registrationsCtrl.user.email" required />
+            <!-- <span ng-show="form.email.$dirty && form.email.$error.required" class="help-block">Email is required</span> -->
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.phone_number.$dirty && form.phone_number.$error.required }">
+            <label for="email">Phone Number</label>
+            <input type="text" name="email" id="email" class="form-control" ng-model="registrationsCtrl.user.email" required />
+           <!--  <span ng-show="form.phone_number.$dirty && form.phone_number.$error.required" class="help-block">Phone Number is required</span> -->
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" ng-model="registrationsCtrl.user.password" required />
+           <!--  <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span> -->
+        </div>
+        <div class="form-actions">
+            <button type="submit" ng-disabled="form.$invalid || registrationsCtrl.dataLoading" class="btn btn-primary">Register</button>
+            <img ng-if="registrationsCtrl.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+            <a href="#/users" class="btn btn-link">Cancel</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>

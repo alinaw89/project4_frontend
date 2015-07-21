@@ -1,7 +1,46 @@
-<div class="container">
-  Filter: <input class="filter_margins" type="text" ng-model="visitFilter.protocol"/>
-  <br />
-  <br />
+<!DOCTYPE html>
+<html class="home">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+
+<!--navbar-->
+<header class="centered-navigation" role="banner">
+  <div class="centered-navigation-wrapper">
+    <a href="javascript:void(0)" class="mobile-logo">
+      <img src="http://i.imgur.com/9rpOGvc.png?1" alt="Logo image">
+    </a>
+    <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
+    <nav role="navigation">
+      <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
+        <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
+        <li class="nav-link more"><a href="javascript:void(0)">Staff</a>
+          <ul class="submenu">
+            <li><a href="#/users">All Users</a></li>
+            <li><a href="#/notifications">Notifications</a></li>
+          </ul>
+        </li>
+        <li class="nav-link logo">
+          <a href="javascript:void(0)" class="logo">
+            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="Logo image">
+          </a>
+        </li>
+        <li class="nav-link" ng-hide="authCtrl.isLoggedIn()"><a href="#/login">Logout</a></li>
+        <li class="nav-link" ng-show="authCtrl.isLoggedIn()" ng-click="authCtrl.logOut()"><a href="#/logout">Logout</a></li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<div >
+
+ <h1>All Visits</h1>
   <table>
     <tr>
       <th ng-click="visitsCtrl.doSort('start_of_visit')">Visit Start Time</th>
@@ -32,30 +71,33 @@
   <br/>
   <br/>
   <footer>Version: {{usersCtrl.appSettings.version}}</footer>
-</div>
+
 
 <!-- CREATING NEW VISIT -->
-
+<h1>Create a New Visit</h1>
 <form>
-  <input type="datetime-local" name="start_of_visit" ng-model="visitsCtrl.newVisit.start_of_visit"/>Start Date
-  <input type="datetime-local" name="end_of_visit" ng-model="visitsCtrl.newVisit.end_of_visit"/> End Date
-  <input type="text" name="protocol" placeholder="protocol" ng-model="visitsCtrl.newVisit.protocol"/>
-  <input type="text" name="subject_id" placeholder="subject id" ng-model="visitsCtrl.newVisit.subject_id"/>
-  <input type="text" name="reason_for_visit" placeholder="reason for visit" ng-model="visitsCtrl.newVisit.reason_for_visit"/>
-  <input type="text" name="message" placeholder="message" ng-model="visitsCtrl.newVisit.message"/>
+  Start Date
+  <input type="datetime-local" name="start_of_visit" ng-model="visitsCtrl.newVisit.start_of_visit"/> End Date
+  <input type="datetime-local" name="end_of_visit" ng-model="visitsCtrl.newVisit.end_of_visit"/> Protocol
+  <input type="text" name="protocol" placeholder="protocol" ng-model="visitsCtrl.newVisit.protocol"/> Subject ID
+  <input type="text" name="subject_id" placeholder="subject id" ng-model="visitsCtrl.newVisit.subject_id"/> Reason for Visit
+  <input type="text" name="reason_for_visit" placeholder="reason for visit" ng-model="visitsCtrl.newVisit.reason_for_visit"/> Message
+  <input type="text" name="message" placeholder="message" ng-model="visitsCtrl.newVisit.message"/> Priority
  <!--  <input type="text" name="priority" placeholder="priority" ng-model="visitsCtrl.newVisit.priority"/> -->
- Priority
-  <select ng-model="visitsCtrl.newVisit.priority" name="priority" >
+
+  <select ng-model="visitsCtrl.newVisit.priority" name="priority">
     <option value="High">High</option>
     <option value="Medium">Medium</option>
     <option value="Low">Low</option>
   </select>
 
 
-
+  Notification
   <input type="text" name="notification" placeholder="notification" ng-model="visitsCtrl.newVisit.notification"/>
 <button ng-click="visitsCtrl.createVisit()">New Visit</button>
 </form>
-
+</div>
+</body>
+</html>
 
 <!-- visitctrl.deletevisit....with id (visit.id) --> <!-- leads to ctrl action that does delete -->

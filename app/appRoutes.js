@@ -26,11 +26,11 @@
           templateUrl: 'app/views/users.html'
         })
         //user id page
-        // .when('/users/:user_id', {
-        //   controller: 'usersController',
-        //   controllerAs: 'usersCtrl',
-        //   templateUrl: 'app/views/users.html'
-        // })
+    // .when('/users/:user_id/visits', {
+    //   controller: 'usersController',
+    //   controllerAs: 'usersCtrl',
+    //   templateUrl: 'app/views/user.html'
+    // })
         //visit page
         .when('/users/:user_id', {
           controller: 'visitsController',
@@ -42,6 +42,12 @@
           controller: 'notificationsController',
           controllerAs: 'notificationsCtrl',
           templateUrl: 'app/views/notification.html'
+        })
+        //registration route
+        .when('/registration', {
+          controller: 'registrationsController',
+          controllerAs: 'registrationsCtrl',
+          templateUrl: 'app/views/registration.html'
         })
           .otherwise({
             redirectTo: '/'

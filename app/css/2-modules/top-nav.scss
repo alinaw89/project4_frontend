@@ -15,7 +15,7 @@
   $centered-navigation-item-nudge: 2.2em;
   $horizontal-bar-mode: $large-screen;
 
-  background-color: white;
+  background-color: black;
   border-bottom: 1px solid darken($centered-navigation-background, 6%);
   min-height: $centered-navigation-height;
   width: 100%;
@@ -109,7 +109,7 @@
     z-index: 9999;
 
     a {
-      color: $centered-navigation-color;
+      color: white;
       display: inline-block;
       outline: none;
       text-decoration: none;

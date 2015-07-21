@@ -11,9 +11,9 @@
     vm.userId = $routeParams.user_id;
 
     function init() {
-      visitsFactory.getVisits(vm.userId)
+      visitsFactory.getVisits()
         .success(function(response) {
-          response.user.visits.forEach(function(visit) {
+          response.visits.forEach(function(visit) {
             vm.visits.push(visit);
           });
         });

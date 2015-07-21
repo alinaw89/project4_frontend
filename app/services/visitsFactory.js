@@ -1,16 +1,17 @@
 (function visitsFactoryIIFE() {
-  var visitsFactory = function($http) {
+  var visitsFactory = function($http, $window) {
     var factory = {};
     factory.visits = [];
     factory.visit = {};
 
-    factory.getVisits = function(userId) {
+    factory.getVisits = function() {
       return $http({
           method: 'get',
-          url: "http://localhost:3000/users/" + userId
+          url: "http://localhost:3000/visits"
         })
-        //.success(function(response) {
-        //  angular.copy(response.user.visits, factory.visits);
+        //comment out if need be
+        // .success(function(response) {
+        //   angular.copy(response.user.visits, factory.visits);
         // });
     };
 
@@ -22,9 +23,11 @@
       return $http.post("http://localhost:3000/visits", visitParams)
         .success(function(response) {
           console.log(response);
+          $window.location.reload();
         }).error(function(error) {
           console.log(error);
         });
+
     };
 
     factory.getVisit = function(visitId) {
@@ -35,14 +38,15 @@
 
     factory.deleteVisit = function(visitId) {
       return $http.delete('http://localhost:3000/visits/' + visitId).success(function(response) {
-        factory.getVisits();
-      })
-    }
+        $window.location.reload();
+
+      });
+    };
 
     return factory;
   };
 
-  visitsFactory.$inject = ['$http'];
+  visitsFactory.$inject = ['$http', '$window'];
 
   angular.module('briefApp').factory('visitsFactory', visitsFactory);
 

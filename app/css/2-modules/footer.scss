@@ -1,30 +1,4 @@
-// Uncomment this for a sticky footer.
-//
-// .wrapper-for-content-outside-of-footer {
-//   min-height: 100%;
-//   height: auto !important;
-//   height: 100%;
-//   margin: 0 auto -4em;
-// }
-
-// html, body {
-//  height: 100%;
-// }
-
-// .wrapper-for-content-outside-of-footer:after {
-//   content: "";
-//   display: block;
-// }
-
-// .footer-2, .wrapper-for-content-outside-of-footer:after {
-//   height: 17em;
-
-//   @include media($large-screen) {
-//     height: 4em;
-//   }
-// }
-
-.footer-2 {
+.footer {
   $base-spacing: 1.5em !default;
   $action-color: #477DCA !default;
   $medium-screen: em(640) !default;
@@ -34,50 +8,50 @@
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
-  background: $footer-background;
-  padding: $base-spacing;
+  background: black;
+  padding: ($base-spacing * 2) $gutter;
   width: 100%;
-  display: inline-block;
 
   .footer-logo {
-    margin-right: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
+    text-align: center;
 
-    @include media($large-screen) {
-      float: left;
-      margin-bottom: 0;
+    img {
+      height: 3em;
     }
   }
 
-  .footer-logo img {
-    height: 1.6em;
+  .footer-links {
+    @include clearfix;
+    margin-bottom: $base-spacing;
+
+    @include media($medium-screen) {
+      @include shift(3);
+    }
   }
 
   ul {
-    line-height: 1.5em;
-    margin: 0 0 1em 0;
+    margin-bottom: $base-spacing * 2;
     padding: 0;
 
-    @include media($large-screen) {
-      float: left;
-      line-height: 1.8em;
-      margin-left: 1em;
-      margin-bottom: 0;
+    @include media($medium-screen) {
+      @include span-columns(3);
+      @include omega(3n);
+      @include clearfix;
     }
   }
 
-  ul li {
-    font-weight: 800;
+  li {
+    line-height: 1.5em;
     list-style: none;
-    padding-right: 1em;
+    text-align: center;
 
-    @include media($large-screen) {
-      display: inline;
+    @include media($medium-screen) {
       text-align: left;
     }
   }
 
-  ul li a {
+  li a {
     color: $footer-link-color;
     text-decoration: none;
 
@@ -87,46 +61,25 @@
     }
   }
 
-  .footer-secondary-links {
-    @include media($large-screen) {
-      float: right;
-    }
+  li h3 {
+    color: $footer-color;
+    font-size: 1em;
+    font-weight: 800;
+    margin-bottom: 0.4em;
+  }
 
-    li {
-      font-size: 0.8em;
-      font-weight: 400;
-    }
+  hr {
+    border: 1px solid transparentize($footer-disclaimer-color, 0.3);
+    margin: 0 auto $base-spacing;
+    width: 12em;
+  }
 
-    ul.footer-social {
-      margin: 1em 0 0 0;
-
-      @include media($large-screen) {
-        float: right;
-        margin-top: 0;
-      }
-
-      li {
-        font-size: 1em;
-        float: left;
-        line-height: 0;
-        margin: 0;
-        padding-right: 0.7em;
-
-        &:last-child {
-          padding-right: 0;
-        }
-      }
-
-      img {
-        height: 1.6em;
-        opacity: 0.7;
-        padding: 1px;
-
-        &:focus,
-        &:hover {
-          opacity: 1;
-        }
-      }
-    }
+  p {
+    color: $footer-disclaimer-color;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    margin: auto;
+    max-width: 35em;
+    text-align: center;
   }
 }

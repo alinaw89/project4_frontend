@@ -1,0 +1,7 @@
+.jumbotron{
+  height:100vh;
+  width:100vw;
+  background:url("http://i.imgur.com/2ZipJVs.jpg?1") no-repeat;
+  margin:0 auto;
+  padding:0;
+}
