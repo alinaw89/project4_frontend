@@ -16,7 +16,7 @@ body {
 
 hr {
     max-width: 50px;
-    border-color: #f05f40;
+    border-color: #A93619;
     border-width: 3px;
 }
 
@@ -25,7 +25,7 @@ hr.light {
 }
 
 a {
-    color: #f05f40;
+    color: white;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -52,7 +52,7 @@ p {
 }
 
 .bg-primary {
-    background-color: #f05f40;
+    background-color: #A93619;
 }
 
 .bg-dark {
@@ -62,6 +62,11 @@ p {
 
 .text-faded {
     color: rgba(255,255,255,.7);
+}
+
+#contact {
+    background-color: #A93619;
+    color: white;
 }
 
 section {
@@ -178,7 +183,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/header.jpg);
+    background-image: url(../img/headerimg.jpg);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -323,7 +328,7 @@ header .header-content .header-content-inner p {
 }
 
 .text-primary {
-    color: #f05f40;
+    color: #A93619;
 }
 
 .no-gutter > [class*=col-] {
@@ -385,9 +390,9 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-    border-color: #f05f40;
+    border-color: #A93619;
     color: #fff;
-    background-color: #f05f40;
+    background-color: #A93619;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -474,3 +479,4 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #222;
 }
+

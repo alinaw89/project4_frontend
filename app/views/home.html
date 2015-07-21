@@ -4,13 +4,253 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title></title>
-  <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="app/css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="app/css/creative.css" type="text/css">
 </head>
-<body>
+
+<!-- START BOOTSTRAP TEMPLATE -->
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Brief</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                <!--     <li>
+                        <a class="page-scroll" href="#/users">Users</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#/notifications">Notifications</a>
+                    </li> -->
+                    <li>
+                        <a class="page-scroll" href="#/login">Login</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#/registration">Registration</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>Welcome to Brief</h1>
+                <hr>
+                <p>A text notification application for clinical researchers </p>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">We've got what you need!</h2>
+                    <hr class="light">
+                    <p class="text-faded">Brief is a clinical research text-messaging application that helps you keep track of daily, highly-important notifications sent to your principal investigator! Create a login and start sending real-time texts about patient visits!</p>
+                    <a href="#/login" class="btn btn-default btn-xl">Get Started!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">At Your Service</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-calendar wow bounceIn text-primary"></i>
+                        <h3>Visit Tracker</h3>
+                        <p class="text-muted">Keep track of all patient related notifications!</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-comments wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                        <h3>Improve Communication</h3>
+                        <p class="text-muted">You can send direct text messages in place of pages straight to your boss!</p>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                        <h3>Up to Date</h3>
+                        <p class="text-muted">We update dependencies to keep things fresh.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                        <h3>Made with Love</h3>
+                        <p class="text-muted">You have to make your websites with love these days!</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="no-padding" id="portfolio">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="app/img/portfolio/1.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="app/img/portfolio/2.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="app/img/portfolio/3.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="app/img/portfolio/4.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="app/img/portfolio/5.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="app/img/portfolio/6.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+   <!--  <aside class="bg-dark">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2>Free Download at Start Bootstrap!</h2>
+                <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>
+            </div>
+        </div>
+    </aside> -->
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <hr class="primary">
+                    <p>Ready to create a new project with me? Visit my website, and send me an email. I will get back to you as soon as possible!</p>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2 text-center">
+                    <i class="fa fa-globe fa-3x wow bounceIn"></i>
+                    <p><a href="text">www.nawalali.com</a></p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p><a href="mailto:your-email@your-domain.com">ali.naw89@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- END BOOTSTRAP TEMPLATE -->
+
+
 
 
   <!--navbar-->
-<header class="centered-navigation" role="banner">
+<!-- <header class="centered-navigation" role="banner">
   <div class="centered-navigation-wrapper">
     <a href="javascript:void(0)" class="mobile-logo">
       <img src="http://i.imgur.com/9rpOGvc.png?1" alt="Logo image">
@@ -37,9 +277,9 @@
     </nav>
   </div>
 </header>
-
+ -->
 <!--hero-->
-<div class="hero">
+<!-- <div class="hero">
   <div class="hero-inner">
     <div class="hero-copy">
       <h1 class="hero-title">WELCOME TO BRIEF</h1>
@@ -47,50 +287,15 @@
     </div>
   </div>
 </div>
-
-
-<!--Bullet Title-->
-<!-- <h1 class="featuresbullet">FEATURES</h1>
-<ul class="bullets">
-  <li class="bullet">
-    <div class="bullet-icon bullet-icon-1">
-      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2.png
-" alt="">
-    </div>
-    <div class="bullet-content">
-      <h2>This Bullet Title</h2>
-      <p>Lorem dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem.</p>
-      </div>
-  </li>
-  <li class="bullet">
-    <div class="bullet-icon bullet-icon-2">
-      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3.png" alt="">
-    </div>
-    <div class="bullet-content">
-      <h2>Another Bullet Title</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum.</p>
-    </div>
-  </li>
-  <li class="bullet">
-    <div class="bullet-icon bullet-icon-3">
-      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_4.png" alt="">
-    </div>
-    <div class="bullet-content">
-      <h2>Last Bullet Title</h2>
-      <p>Lorem ipsum sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem.</p>
-    </div>
-  </li> -->
-<!-- </ul>
  -->
 
 
 <!-- hover animation -->
-<div id="alltiles"
+<!-- <div id="alltiles"
   <div class="hover-tile-outer firstimg">
     <div class="hover-tile-container firstimg">
       <div class="hover-tile hover-tile-visible"></div>
       <div class="hover-tile hover-tile-hidden">
-        <!-- <h4>What do we do?</h4> -->
         <h4>Add visits to your visit calendar</h4>
       </div>
     </div>
@@ -101,7 +306,6 @@
       <div class="hover-tile hover-tile-visible"></div>
       <div class="hover-tile hover-tile-hidden">
         <h4>Keep connected with doctors through real-time alerts</h4>
-        <!-- <p>Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.</p> -->
       </div>
     </div>
   </div>
@@ -111,29 +315,15 @@
       <div class="hover-tile hover-tile-visible"></div>
       <div class="hover-tile hover-tile-hidden">
         <h4>View other coordinators schedules</h4>
-       <!--  <p>Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.</p> -->
       </div>
     </div>
   </div>
 </div>
 
-
-<!-- Sideimage -->
-
-<!-- <div id="maintitle"><h1 >Brief</h1></div>
  -->
-<!--  <div id="mainpage" class="side-image">
-  <div class="images-wrapper"></div>
-    <div class="side-image-content">
-      <h4>Topic Name</h4>
-      <h1>Message with a gradient image</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam assumenda nihil suscipit obcaecati sit, cum quod corporis adipisci ipsam, fugiat, quae error. Eaque commodi, dicta quidem explicabo mollitia inventore quibusdam.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam assumenda nihil suscipit obcaecati sit, cum quod corporis adipisci ipsam, fugiat, quae error. Eaque commodi, dicta quidem explicabo mollitia inventore quibusdam.</p>
-  </div>
-</div> -->
 
 <!--footer-->
-
+<!--
 <footer class="footer" role="contentinfo">
   <div class="footer-logo">
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo image">
@@ -162,6 +352,6 @@
 
   <p>Copyright Nawal Ali</p>
 </footer>
-
+ -->
 </body>
 </html>
