@@ -11,7 +11,7 @@
 </head>
 <body id="page-top">
 
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top affix">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -78,17 +78,22 @@
   </div>
 </header> -->
 
-<div class="container loginbg">
 
-<h2 id="login">Login</h2>
-<div class="login">
-  <form>
-    <labels>Email <input type="email" ng-model="authCtrl.credentials.email"/></labels>
-    <labels>Password <input type="password" ng-model="authCtrl.credentials.password"/></labels>
 
-    <button ng-click="authCtrl.login()">Login</button>
-  </form>
-</div>
+<div class="container loginbox">
+  <h2 id="login">Login</h2> </br>
+  <div class="login">
+    <form>
+      Email </br>
+      <labels><input type="email" ng-model="authCtrl.credentials.email"/></labels> </br></br>
+      Password </br>
+      <labels><input type="password" ng-model="authCtrl.credentials.password"/></labels>
+      </br></br>
+      <button class="signin-button" ng-click="authCtrl.login()">Sign in</button>
+      </br></br>
+      <a class="page-scroll" href="#/registration">Sign Up</a>
+    </form>
+  </div>
 </div>
 
 </body>
