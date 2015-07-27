@@ -1,0 +1,37 @@
+body {
+  background-color: black;
+  color: #A93619;
+}
+
+.usersdiv{
+  margin-top: 100px;
+}
+
+h1 {
+  padding-bottom:30px;
+}
+
+.table {
+  text-align: center;
+  border: none;
+  border-collapse: collapse;
+  border-style: none;
+}
+
+table {
+  border: none;
+  border-collapse: collapse;
+  border-style: none;
+}
+
+th {
+  text-align: center;
+  margin-right: 100px;
+  border: none;
+  outline: none;
+  border-style: none;
+}
+
+tr {
+  border-style: none;
+}
