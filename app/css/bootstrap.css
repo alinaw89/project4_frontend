@@ -1609,6 +1609,7 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+
 .row {
   margin-right: -15px;
   margin-left: -15px;
@@ -4540,6 +4541,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-right: 0;
   }
 }
+
+
 .navbar-default {
   background-color: #f8f8f8;
   border-color: #e7e7e7;

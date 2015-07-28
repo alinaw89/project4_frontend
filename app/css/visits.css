@@ -1,0 +1,27 @@
+body {
+  background-color: #A93619;
+  color: white;
+}
+
+.visits {
+  margin-top: 100px;
+  margin-left: 40px;
+}
+
+table {
+  text-align: center;
+}
+
+th {
+  text-align: center;
+  margin-right: 100px;
+  border: none;
+  outline: none;
+  border-style: none;
+  white-space: nowrap;
+}
+
+td {
+  white-space: nowrap;
+}
+

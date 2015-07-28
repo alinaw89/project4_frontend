@@ -1,6 +1,6 @@
 body {
-  background-color: black;
-  color: #A93619;
+  background-color: #A93619;
+  color: white;
 }
 
 .usersdiv{
@@ -16,6 +16,7 @@ h1 {
   border: none;
   border-collapse: collapse;
   border-style: none;
+  cursor: pointer;
 }
 
 table {

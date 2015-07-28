@@ -1,46 +1,55 @@
 
 
-
-
-
 <!DOCTYPE html>
 <html class="home">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <link rel="stylesheet" href="">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+    <link rel="stylesheet" href="app/css/animate.min.css" type="text/css">
+
+    <link rel="stylesheet" href="app/css/notifications.css" type="text/css">
+</head>
   <body>
 
- <!--navbar-->
-<header class="centered-navigation" role="banner">
-  <div class="centered-navigation-wrapper">
-    <a href="javascript:void(0)" class="mobile-logo">
-      <img src="http://i.imgur.com/9rpOGvc.png?1" alt="Logo image">
-    </a>
-    <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
-    <nav role="navigation">
-      <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
-        <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
-        <li class="nav-link more"><a href="javascript:void(0)">Staff</a>
-          <ul class="submenu">
-            <li><a href="#/users">All Users</a></li>
-            <li><a href="#/notifications">Notifications</a></li>
-          </ul>
-        </li>
-        <li class="nav-link logo">
-          <a href="javascript:void(0)" class="logo">
-            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="Logo image">
-          </a>
-        </li>
-        <li class="nav-link" ng-hide="authCtrl.isLoggedIn()"><a href="#/login">Logout</a></li>
-        <li class="nav-link" ng-show="authCtrl.isLoggedIn()" ng-click="authCtrl.logOut()"><a href="#/logout">Logout</a></li>
+<!--navbar-->
+ <nav id="mainNav" class="navbar navbar-default navbar-fixed-top affix">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Brief</a>
+            </div>
 
-      </ul>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#/users">Users</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#/notifications">Notifications</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#/login">Login</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#/logout">Logout</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#/registration">Registration</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-  </div>
-</header>
+<!--actual code-->
 
 <div class="container">
   <h1>Notifications</h1>
