@@ -1,3 +1,8 @@
+var baseURL = function() {
+  // return "http://localhost:3000";
+  return "https://pure-atoll-4090.herokuapp.com";
+};
+
 (function NotificationsFactoryIIFE() {
   var NotificationsFactory = function($http) {
     var factory = {};
@@ -7,7 +12,7 @@
     factory.getNotification = function(visitId) {
       return $http({
         method: 'get',
-        url: "http://localhost:3000/visits/" + visitId + '/notification',
+        url: baseURL() + "/visits/" + visitId + '/notification',
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
@@ -20,7 +25,7 @@
     factory.getNotifications = function() {
       return $http({
         method: 'get',
-        url: "http://localhost:3000/notifications",
+        url: baseURL + "/notifications",
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
@@ -43,7 +48,7 @@
         var arrPromises = factory.notifications.map(function(notification) {
           return $http({
             method: 'get',
-            url: "http://localhost:3000/visits/" + notification.visit_id,
+            url: baseURL()+ "/visits/" + notification.visit_id,
             headers: {
               "Content-Type": "application/json",
               "Accept": "application/json"
@@ -64,7 +69,7 @@
           message: "From: " + from + " " + "Message: " + notificationParams
         }
       };
-      return $http.post("http://localhost:3000/visits/" + visitId + '/notifications', notification)
+      return $http.post(baseURL()+"/visits/" + visitId + '/notifications', notification)
         .success(function(response) {
           console.log(response);
         }).error(function(error) {

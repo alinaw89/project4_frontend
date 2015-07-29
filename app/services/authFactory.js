@@ -1,3 +1,9 @@
+// PATH FOR HEROKU
+var baseURL = function() {
+  // return "http://localhost:3000";
+  return "https://pure-atoll-4090.herokuapp.com";
+};
+
 (function authFactoryIFFE() {
 
   var AuthFactory = function($http, $location, $window) {
@@ -11,7 +17,7 @@
     // };
 
     var login = function(credentials) {
-      return $http.post('http://localhost:3000/login', credentials).success(function(response) {
+      return $http.post(baseURL()+'/login', credentials).success(function(response) {
         console.log(response.user);
         angular.copy(response.user, currentUser);
         $window.localStorage.setItem('gl-user-token', response.user.token);

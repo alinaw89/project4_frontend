@@ -1,3 +1,8 @@
+var baseURL = function() {
+  // return "http://localhost:3000";
+  return "https://pure-atoll-4090.herokuapp.com";
+};
+
 (function() {
   'use strict';
 
@@ -27,7 +32,7 @@
 
     function Create(user) {
       debugger;
-      return $http.post('http://localhost:3000/register', user).then(handleSuccess, handleError('Error creating user'));
+      return $http.post(baseURL()+'/register', user).then(handleSuccess, handleError('Error creating user'));
 
     }
 

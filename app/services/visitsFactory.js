@@ -1,3 +1,9 @@
+// PATH FOR HEROKU
+var baseURL = function() {
+  // return "http://localhost:3000";
+  return "https://pure-atoll-4090.herokuapp.com";
+};
+
 (function visitsFactoryIIFE() {
   var visitsFactory = function($http, $window) {
     var factory = {};
@@ -7,7 +13,7 @@
     factory.getVisits = function() {
       return $http({
           method: 'get',
-          url: "http://localhost:3000/visits"
+          url: baseURL()+"/visits"
         })
         //comment out if need be
         // .success(function(response) {
@@ -20,7 +26,7 @@
       var visit = {
         visit: visitParams
       };
-      return $http.post("http://localhost:3000/visits", visitParams)
+      return $http.post(baseURL()+"/visits", visitParams)
         .success(function(response) {
           console.log(response);
           $window.location.reload();
@@ -31,13 +37,13 @@
     };
 
     factory.getVisit = function(visitId) {
-      return $http.get('http://localhost:3000/visits/' + visitId).success(function(response) {
+      return $http.get(baseURL()+'/visits/' + visitId).success(function(response) {
         angular.copy(response, factory.visit);
       });
     };
 
     factory.deleteVisit = function(visitId) {
-      return $http.delete('http://localhost:3000/visits/' + visitId).success(function(response) {
+      return $http.delete(baseURL()+'/visits/' + visitId).success(function(response) {
         $window.location.reload();
 
       });
