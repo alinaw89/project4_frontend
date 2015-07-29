@@ -1,7 +1,4 @@
-var baseURL = function() {
-  // return "http://localhost:3000";
-  return "https://pure-atoll-4090.herokuapp.com";
-};
+
 
 (function() {
   'use strict';
