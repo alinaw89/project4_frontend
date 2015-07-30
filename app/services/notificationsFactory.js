@@ -1,4 +1,8 @@
-
+// PATH FOR HEROKU
+var baseURL = function() {
+  // return "http://localhost:3000";
+  return "https://pure-atoll-4090.herokuapp.com";
+};
 
 (function NotificationsFactoryIIFE() {
   var NotificationsFactory = function($http) {
