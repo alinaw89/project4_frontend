@@ -17,7 +17,7 @@ var baseURL = function() {
     // };
 
     var login = function(credentials) {
-      return $http.post(baseURL()+'/login', credentials).success(function(response) {
+      return $http.post(baseURL()+'/login', {auth: credentials}).success(function(response) {
         console.log(response.user);
         angular.copy(response.user, currentUser);
         $window.localStorage.setItem('gl-user-token', response.user.token);
