@@ -26,7 +26,7 @@ var baseURL = function() {
     factory.getNotifications = function() {
       return $http({
         method: 'get',
-        url: baseURL + "/notifications",
+        url: baseURL() + "/notifications",
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
