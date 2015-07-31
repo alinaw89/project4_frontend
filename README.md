@@ -1,46 +1,35 @@
-# BRIEF - Front End
+# BRIEF
 
 
-##ABOUT
-BRIEF is a rails and Angular app <!-- that allows users to track inventory of their cosmetic items. Users can upload items and view them in their virtual cosmetic bag.
+##About
+"Brief" is a text notification app targeted towards clinical researchers and their principal investigators. It helps a coordinator keep track of patient visits and allows them to directly send real-time text alerts to the doctor that are a high priority.
 
-The app can be viewed at  http://alinaw89.github.io/project2_frontend/#
+
+The app can be viewed at: http://alinaw89.github.io/project4_frontend/#/
+
+Temporary user
+Login: ryan@partners.org
+Password: ryan
+
+##Explanation & General Approach
+
+This is a full-stack app built with Ruby on Rails and Twilio on the backend, AngularJS on the front end, and Bootstrap.
 
 ##Features
 
-Homepage shows an about me blurb. </br>
-User can create new user account.</br>
-User can login.</br>
-User can add a cosmetic item to a specific category of eyes, lips, face, hair or body. </br>
-User can view all products.</br>
-User can select which products to view based on category dropdown.
+Landing page shows log in area
+User can create a new account
+User can login
+User can select which coordinator visits to view
+User can create new visit
+User can send real time text-notifications to doctor
+User can view all text notifications in one area
 
 ##Wireframes
 
-![alt tag](http://i.imgur.com/WFymRox.png?1)
 
-![alt tag](http://i.imgur.com/Vk53R5h.png?1)
-
-
-##Description
-
-COMPACT is designed to allow users to store their cosmetics and view them in a virtual cosmetic bag. Users can open up the application at their convenience to track their cosmetics. This app was designed using Ruby on Rails.
-
-The product can be improved in a few areas. It can be designed as a mobile app so that users can add or view products at their own convenience. The app can also be improved where a user can edit, review and share products they uploaded with other users.
-
-
-##Install
-To begin, run bundle install and install the paperclip plugin
-
-If you would like to begin with an initial user and sample data, run rake db:seed and utilize the following login information:
-
-Temporary user</br>
-LOGIN:  nawal@gmail.com</br>
-PASSWORD:  nawal
-
-
-
-
-
-
- -->
+![alt tag](http://i.imgur.com/9DRUWOh.png?1)
+![alt tag](http://i.imgur.com/7Kk8LGo.png?1)
+![alt tag](http://i.imgur.com/3W6aQ0A.png?1)
+![alt tag](http://i.imgur.com/Lc6ANas.png?1)
+![alt tag](http://i.imgur.com/O79cVw0.png?1)
