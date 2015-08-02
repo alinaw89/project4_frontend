@@ -1,8 +1,9 @@
 body {
-  background-color: white;
+  background-color: #2584A2;
 }
 
 .visits {
+  background-color: white;
   margin-top: 100px;
   margin-left: 40px;
   color:#a93619;
@@ -10,6 +11,7 @@ body {
   height:1200px;
   font-family:'Raleway', sans-serif;
   padding:30px;
+  border-radius: 10px;
 }
 
 h1 {
@@ -48,4 +50,8 @@ input{
 
 #newvisit h1{
   margin-left:51px;
+}
+
+h1{
+  color: #2584A2;
 }

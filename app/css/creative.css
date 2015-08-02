@@ -15,7 +15,7 @@ body {
 }
 
 hr {
-    max-width: 50px;
+    max-width: 80px;
     border-color: #A93619;
     border-width: 3px;
 }
@@ -45,6 +45,11 @@ h6 {
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
 }
 
+h1{
+  margin-left: 5px;
+  color: #2584A2;
+}
+
 p {
     margin-bottom: 20px;
     font-size: 16px;
@@ -52,7 +57,7 @@ p {
 }
 
 .bg-primary {
-    background-color: #A93619;
+    background-color: #2584A2;
 }
 
 .bg-dark {
@@ -65,7 +70,7 @@ p {
 }
 
 #contact {
-    background-color: #A93619;
+    background-color: #2584A2;
     color: white;
 }
 
@@ -183,7 +188,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/headerimg.jpg);
+    background-image: url(../img/header1.jpg);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -237,10 +242,11 @@ header .header-content .header-content-inner p {
     }
 
     header .header-content .header-content-inner p {
-        margin-right: auto;
-        margin-left: auto;
+
         max-width: 80%;
+        margin-left: 398px;
         font-size: 18px;
+        color: black;
     }
 }
 

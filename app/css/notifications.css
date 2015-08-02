@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color: #2584A2;
 }
 
 .container {
@@ -7,15 +7,18 @@ body {
 }
 
 .notifications {
- margin-top: 100px;
+  background-color:white;
+  margin-top: 100px;
   color: #A93619;
   height:700px;
   font-family:'Raleway', sans-serif;
+  border-radius: 10px;
 }
 
 h1 {
    padding-bottom:30px;
   text-align:center;
+  color: #2584A2;
 }
 
 th {

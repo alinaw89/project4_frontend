@@ -1,5 +1,5 @@
 body {
-  background-color: #A93619;
+  background-color: #2584A2;
   color: white;
 }
 
@@ -9,11 +9,13 @@ body {
   color: #A93619;
   height:700px;
   font-family:'Raleway', sans-serif;
+  border-radius: 10px;
 }
 
 h1 {
   padding-bottom:30px;
   text-align:center;
+  color: #2584A2;
 }
 
 .table {

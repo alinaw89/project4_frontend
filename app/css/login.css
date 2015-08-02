@@ -1,5 +1,5 @@
 body {
-  background-color: #A93619;
+  background-color: #2584A2;
   color: #A93619;
   font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
   font-size: 16px;
@@ -10,7 +10,7 @@ body {
 .loginbox {
   margin-left: 10em;
   width: 1040px;
-  height:700px;
+  height:450px;
   background-color: white;
   border-left: 1px solid #A93619;
   border-top: 1px solid #A93619;
@@ -19,10 +19,12 @@ body {
     box-shadow:         10px 10px 0px 0px #A93619;
   margin-top: 140px;
   padding-bottom:30px;
+  border-radius: 10px;
 }
 
 h2 {
   font-size: 3em;
+  color: #2584A2;
 }
 
 .page-scroll {
