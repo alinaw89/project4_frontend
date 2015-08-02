@@ -1,6 +1,5 @@
 body {
-  background-color: #A93619;
-  color: white;
+  background-color: white;
 }
 
 .container {
@@ -9,7 +8,6 @@ body {
 
 .notifications {
  margin-top: 100px;
-  background-color:white;
   color: #A93619;
   height:700px;
   font-family:'Raleway', sans-serif;

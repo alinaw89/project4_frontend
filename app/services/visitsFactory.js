@@ -13,7 +13,7 @@ var baseURL = function() {
     factory.getVisits = function() {
       return $http({
           method: 'get',
-          url: baseURL()+"/visits"
+          url: baseURL() + "/visits"
         })
         //comment out if need be
         // .success(function(response) {
@@ -22,14 +22,14 @@ var baseURL = function() {
     };
 
     factory.createVisit = function(visitParams) {
-      console.log(visitParams);
+      console.log("visitParams", visitParams);
       var visit = {
         visit: visitParams
       };
-      return $http.post(baseURL()+"/visits", visitParams)
+      return $http.post(baseURL() + "/visits", visitParams)
         .success(function(response) {
           console.log(response);
-          $window.location.reload();
+        // $window.location.reload();
         }).error(function(error) {
           console.log(error);
         });
@@ -37,13 +37,13 @@ var baseURL = function() {
     };
 
     factory.getVisit = function(visitId) {
-      return $http.get(baseURL()+'/visits/' + visitId).success(function(response) {
+      return $http.get(baseURL() + '/visits/' + visitId).success(function(response) {
         angular.copy(response, factory.visit);
       });
     };
 
     factory.deleteVisit = function(visitId) {
-      return $http.delete(baseURL()+'/visits/' + visitId).success(function(response) {
+      return $http.delete(baseURL() + '/visits/' + visitId).success(function(response) {
         $window.location.reload();
 
       });

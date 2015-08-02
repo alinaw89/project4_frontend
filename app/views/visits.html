@@ -61,7 +61,7 @@
       <th ng-click="visitsCtrl.doSort('protocol')">Protocol Title</th>
       <th ng-click="visitsCtrl.doSort('subject_id')"> Subject ID</th>
       <th ng-click="visitsCtrl.doSort('reason_for_visit')">Visit Reason</th>
-    <!--   <th ng-click="visitsCtrl.doSort('message')">Message</th> -->
+      <!--   <th ng-click="visitsCtrl.doSort('message')">Message</th> -->
       <th ng-click="visitsCtrl.doSort('priority')">Priority </th>
       <th ng-click="notificationsCtrl.showNotification(visit.id)">Notification</th>
 
@@ -80,14 +80,13 @@
     </tr>
   </table>
   <br/>
-<!--   <span>Total users: {{usersCtrl.users.length}}</span> -->
+<!-- <span>Total users: {{usersCtrl.users.length}}</span> -->
   <br/>
   <br/>
 
   </div>
 
 <!-- CREATING NEW VISIT -->
-
 <div id="newvisit" class="row col-xs-2">
 <h1>New Visit</h1>
 <form>
@@ -95,9 +94,10 @@
   <input class="date" type="datetime-local" name="start_of_visit" ng-model="visitsCtrl.newVisit.start_of_visit"/><br/><br/> End Date
   <input class="date" type="datetime-local" name="end_of_visit" ng-model="visitsCtrl.newVisit.end_of_visit"/><br/><br/> Protocol
   <input type="text" name="protocol" placeholder="Protocol Short Name" ng-model="visitsCtrl.newVisit.protocol"/><br/><br/> Subject ID
-  <input type="text" name="subject_id" placeholder="Subject ID" ng-model="visitsCtrl.newVisit.subject_id"/><br/><br/> Reason for Visit
+  <input type="text" name="subject_id" placeholder="Subject ID" ng-model="visitsCtrl.newVisit.subject_id"/><br/><br/> Visit Reason
   <input type="text" name="reason_for_visit" placeholder="Visit Reason" ng-model="visitsCtrl.newVisit.reason_for_visit"/><br/><br/> <!-- Message
-  <input type="text" name="message" placeholder="message" ng-model="visitsCtrl.newVisit.message"/>  -->Priority
+  <input type="text" name="message" placeholder="message" ng-model="visitsCtrl.newVisit.message"/> -->Priority
+   <!--  <input type="text" name="priority" placeholder="priority" ng-model="visitsCtrl.newVisit.priority"/> -->
   <select ng-model="visitsCtrl.newVisit.priority" name="priority">
     <option value="High">High</option>
     <option value="Medium">Medium</option>
@@ -107,7 +107,7 @@
   <br/><br/>
   Notification
   <input type="text" name="notification" placeholder="notification" ng-model="visitsCtrl.newVisit.notification"/>
-  <br/><br/>
+<br/><br/>
 <button ng-click="visitsCtrl.createVisit()">Add New Visit</button>
 </form>
 

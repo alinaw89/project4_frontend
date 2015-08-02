@@ -32,8 +32,11 @@
       var from = AuthFactory.currentUser.name;
       var notification = this.newVisit.notification;
       visitsFactory.createVisit(this.newVisit).then(function(response) {
+        console.log("notification", notification);
+        notificationsFactory.createNotification(response.data.visit.id, notification, from).then(function(response) {
+          $window.location.reload();
+        });
 
-        notificationsFactory.createNotification(response.data.visit.id, notification, from);
       });
     };
 

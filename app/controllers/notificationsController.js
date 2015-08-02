@@ -21,12 +21,12 @@
 
     this.showNotification = function(visitID) {
       console.log("Showing one notification");
-      this.location.path("/visits/" + visitID + "/notification");
+      this.location.path("/visits/" + visitID + "/notifications");
       notificationsFactory.getNotification(visitID);
     };
 
     this.createNotification = function(visitID) {
-      this.location.path("/visits/" + visitID + "/notification")
+      this.location.path("/visits/" + visitID + "/notifications")
     };
   };
 

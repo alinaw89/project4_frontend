@@ -1,15 +1,13 @@
 body {
-  background-color: #A93619;
-  color: white;
+  background-color: white;
 }
 
 .visits {
   margin-top: 100px;
   margin-left: 40px;
-  background-color:white;
   color:#a93619;
   width:1365px;
-  height:960px;
+  height:1200px;
   font-family:'Raleway', sans-serif;
   padding:30px;
 }
@@ -24,7 +22,7 @@ table {
 }
 
 th {
-   text-align: center;
+  text-align: center;
   margin-right: 100px;
   border: none;
   outline: none;
