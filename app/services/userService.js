@@ -32,8 +32,8 @@ var baseURL = function() {
     }
 
     function Create(user) {
-      debugger;
-      return $http.post(baseURL()+'/register', user).then(handleSuccess, handleError('Error creating user'));
+
+      return $http.post(baseURL() + '/register', user).then(handleSuccess, handleError('Error creating user'));
 
     }
 
