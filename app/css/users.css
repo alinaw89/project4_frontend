@@ -5,10 +5,15 @@ body {
 
 .usersdiv{
   margin-top: 100px;
+  background-color:white;
+  color: #A93619;
+  height:700px;
+  font-family:'Raleway', sans-serif;
 }
 
 h1 {
   padding-bottom:30px;
+  text-align:center;
 }
 
 .table {
@@ -31,8 +36,15 @@ th {
   border: none;
   outline: none;
   border-style: none;
+  font-size:19px;
+  font-weight:bold;
+  width:100px;
 }
 
 tr {
   border-style: none;
 }
+
+
+
+

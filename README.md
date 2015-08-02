@@ -8,8 +8,8 @@
 The app can be viewed at: http://alinaw89.github.io/project4_frontend/#/
 
 Temporary user
-Login: ryan@partners.org
-Password: ryan
+Login: dan@partners.org
+Password: dan
 
 ##Explanation & General Approach
 

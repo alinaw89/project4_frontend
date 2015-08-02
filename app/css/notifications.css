@@ -7,8 +7,17 @@ body {
   margin-top:100px;
 }
 
+.notifications {
+ margin-top: 100px;
+  background-color:white;
+  color: #A93619;
+  height:700px;
+  font-family:'Raleway', sans-serif;
+}
+
 h1 {
-  padding-bottom:30px;
+   padding-bottom:30px;
+  text-align:center;
 }
 
 th {
@@ -17,9 +26,14 @@ th {
   border: none;
   outline: none;
   border-style: none;
-  white-space: nowrap;
 }
 
-td {
-  white-space: nowrap;
+
+
+.table {
+  text-align: center;
+  border: none;
+  border-collapse: collapse;
+  border-style: none;
+  cursor: pointer;
 }

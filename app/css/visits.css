@@ -6,6 +6,17 @@ body {
 .visits {
   margin-top: 100px;
   margin-left: 40px;
+  background-color:white;
+  color:#a93619;
+  width:1365px;
+  height:960px;
+  font-family:'Raleway', sans-serif;
+  padding:30px;
+}
+
+h1 {
+  padding-bottom:30px;
+  text-align:center;
 }
 
 table {
@@ -13,18 +24,30 @@ table {
 }
 
 th {
-  text-align: center;
+   text-align: center;
   margin-right: 100px;
   border: none;
   outline: none;
   border-style: none;
-  white-space: nowrap;
+  font-size:19px;
+  font-weight:bold;
+  width:100px;
 }
 
-td {
-  white-space: nowrap;
+input{
+  width:100%;
 }
 
-input {
-  color:black;
+.date {
+  color:grey;
+}
+
+
+#newvisit{
+  width: 900px;
+  margin-left: 180px;
+}
+
+#newvisit h1{
+  margin-left:51px;
 }
