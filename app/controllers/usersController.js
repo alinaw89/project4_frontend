@@ -11,7 +11,7 @@
 
     function init() {
       usersFactory.getUsers();
-    }
+    };
 
     init();
 
@@ -24,7 +24,7 @@
       console.log("ID is " + userID);
       this.location.path("/users/" + userID);
       // usersFactory.getUser(userID);
-    }
+    };
 
   };
 

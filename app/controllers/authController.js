@@ -1,6 +1,4 @@
 (function authControllerIFFE() {
-
-
   function AuthController($location, AuthFactory) {
     var vm = this;
     vm.credentials = {};

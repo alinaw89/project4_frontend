@@ -17,7 +17,6 @@ function RegistrationsController(UserService, $location, $rootScope) {
           vm.dataLoading = false;
         }
       });
-
   }
 }
 

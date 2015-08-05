@@ -36,7 +36,6 @@
         notificationsFactory.createNotification(response.data.visit.id, notification, from).then(function(response) {
           $window.location.reload();
         });
-
       });
     };
 
